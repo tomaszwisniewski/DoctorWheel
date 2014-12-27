@@ -1,0 +1,122 @@
+﻿@model DoctorWheel.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Car</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.TownName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.TownName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicensePlate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicensePlate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToSell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToSell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairPrecentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairPrecentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOrdered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOrdered)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

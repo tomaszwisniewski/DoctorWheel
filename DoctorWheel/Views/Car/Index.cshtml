@@ -1,0 +1,105 @@
+﻿@model IEnumerable<DoctorWheel.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.TownName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LicensePlate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InService)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToSell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepairPrecentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsOrdered)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.TownName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LicensePlate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InService)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToSell)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepairPrecentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsOrdered)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
